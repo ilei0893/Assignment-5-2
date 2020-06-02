@@ -8,6 +8,7 @@
   <body>
     <div id="grids">
         <button type="button" onClick="NewRows()">Add a row</button>
+
         <button type="button" onClick="NewCols()">Add a column</button>
         <button type="button" onClick="removeRow()">Remove a rows</button>
         <button type="button" onClick="removeCells()">Remove a column</button>
@@ -20,13 +21,12 @@
       <br>
       <br>
       <span>Select color:</span>
-      <select onchange="selectColor(this.value)">
-        <option value="red">Red</option>
-        <option value="orange">Orange</option>
-        <option value="yellow">Yellow</option>
-        <option value="green">Green</option>
+      <select onchange="nowcolor(this.value)">
         <option value="blue">Blue</option>
-        <option value="purple">Purple</option>
+        <option value="red">Red</option>
+        <option value="yellow">Yellow</option>
+        <option value="orange">Orange</option>
+       
       </select>
     </div>
     <br />
