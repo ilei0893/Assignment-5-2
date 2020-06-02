@@ -58,7 +58,6 @@ function NewCols(){
   function helper(cell) {
     cell.classList.add("uncolor");
     cell.addEventListener("click", changeColor);
-  
   }
 
   function changeColor() {
@@ -66,11 +65,16 @@ function NewCols(){
     this.classList.remove("uncolor");
   }
 
-  function clearAll() {
+  function unfilledCells() {
     let cells = document.getElementsByTagName("td");
-    let allCells = [...cells];
-    allCells.forEach((cell) => {
-      cell.style.backgroundColor = "#ffffff";
-      // cell.classList.add("uncolored");
+    let cls = [...cells];
+    let uncoloredCells = cls.filter((cell) => {
+      return cell.classList.contains("uncolor");
+    });
+  
+    uncoloredCells.forEach((cell) => {
+      cell.style.backgroundColor = mycolor;
+      cell.classList.remove("uncolor");
     });
   }
+  
