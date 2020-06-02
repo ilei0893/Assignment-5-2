@@ -66,6 +66,14 @@ function NewCols(){
     this.classList.remove("uncolor");
   }
 
+  function clearAll() {
+    let cells = document.getElementsByTagName("td");
+    let allCells = [...cells];
+    allCells.forEach((cell) => {
+      cell.style.backgroundColor = "#ffffff";
+      // cell.classList.add("uncolored");
+    });
+  }
 
   function colorAllCells() {
     let cells = document.getElementsByTagName("td");
@@ -88,4 +96,4 @@ function NewCols(){
       cell.classList.remove("uncolor");
     });
   }
-  
+
