@@ -18,7 +18,7 @@ function NewRows() {
     let rows = document.getElementsByClassName("row");
     tr = [...rows]
     if (tr.length == 0) {
-        alert('there is nothing can remove');
+        alert('there is nothing to remove');
       return this
     }
     tr[tr.length - 1].parentNode.removeChild(tr[tr.length - 1]);
@@ -28,7 +28,7 @@ function NewRows() {
 }
  function removecol() {
     if (cells == 1) {
-        alert('there is nothing can remove');
+        alert('there is nothing to remove');
       return this;
     }
     cells--;
