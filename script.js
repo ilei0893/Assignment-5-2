@@ -65,3 +65,12 @@ function NewCols(){
     this.style.backgroundColor = mycolor;
     this.classList.remove("uncolor");
   }
+
+  function clearAll() {
+    let cells = document.getElementsByTagName("td");
+    let allCells = [...cells];
+    allCells.forEach((cell) => {
+      cell.style.backgroundColor = "#ffffff";
+      // cell.classList.add("uncolored");
+    });
+  }
