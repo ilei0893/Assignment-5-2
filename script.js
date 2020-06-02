@@ -10,3 +10,15 @@ function NewRows() {
     }
   }
   
+  function removeRow() {
+    let rows = document.getElementsByClassName("row");
+    tr = [...rows];
+    if (tr.length == 0) {
+        alert('there is nothing can remove');
+      return this;
+    }
+    tr[tr.length - 1].parentNode.removeChild(tr[tr.length - 1]);
+    if (tr.length == 1) {
+      cells = 1;
+    }
+}
