@@ -74,3 +74,26 @@ function NewCols(){
       // cell.classList.add("uncolored");
     });
   }
+
+  function colorAllCells() {
+    let cells = document.getElementsByTagName("td");
+    let allCells = [...cells];
+    allCells.forEach((cell) => {
+      cell.style.backgroundColor = mycolor;
+      cell.classList.remove("uncolor");
+    });
+  }
+
+  function unfilledCells() {
+    let cells = document.getElementsByTagName("td");
+    let allCells = [...cells];
+    let unfilledCells = allCells.filter((cell) => {
+      return cell.classList.contains("uncolor");
+    });
+  
+    unfilledCells.forEach((cell) => {
+      cell.style.backgroundColor = mycolor;
+      cell.classList.remove("uncolor");
+    });
+  }
+
