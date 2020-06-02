@@ -1,4 +1,7 @@
 let cells = 1;
+let mycolor ='blue';
+let iscolor = false;
+
 function NewRows() {
     let table = document.getElementById("table");
     let row = document.createElement("tr");
@@ -6,7 +9,9 @@ function NewRows() {
     table.appendChild(row);
     for (let i = 0; i < cells; i++) {
       let cell = document.createElement("td");
+      helperFunction(cell);
       row.appendChild(cell);
+
     }
   }
   function removeRow() {
@@ -21,7 +26,6 @@ function NewRows() {
       cells = 1
     }
 }
-
  function removecol() {
     if (cells == 1) {
         alert('there is nothing can remove');
@@ -33,4 +37,19 @@ function NewRows() {
     for (let i = 0; i < tr.length; i++) {
       tr[i].removeChild(tr[i].lastChild);
     }
+  }
+
+  const nowcolor = (color) => {
+    mycolor = color;
+  };
+
+  function helperFunction(cell) {
+    cell.classList.add("uncolor");
+    cell.addEventListener("click", changeColor);
+  
+  }
+
+  function changeColor() {
+    this.style.backgroundColor = mycolor;
+    this.classList.remove("uncolor");
   }

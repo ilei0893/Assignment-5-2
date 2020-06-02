@@ -8,9 +8,9 @@
   <body>
     <div id="grids">
         <button type="button" onClick="NewRows()">Add a row</button>
-        <button type="button" onClick="NewCols()">Add a cells</button>
-        <button type="button" onClick="removeRow()">Remove a rows</button>
-        <button type="button" onClick="removeCells()">Remove a cells</button>
+        <button type="button" onClick="NewCols()">Add a col</button>
+        <button type="button" onClick="removeRow()">Remove a row</button>
+        <button type="button" onClick="removecol()">Remove a col</button>
         <button type="button" onClick="fillUncolored()">Color uncolored cells</button>
         <button type="button" onClick="fillAll()">Color all cells</button>
         <button onClick="clearAll()">Clear all cells</button>
@@ -20,13 +20,12 @@
       <br>
       <br>
       <span>Select color:</span>
-      <select onchange="selectColor(this.value)">
-        <option value="red">Red</option>
-        <option value="orange">Orange</option>
-        <option value="yellow">Yellow</option>
-        <option value="green">Green</option>
+      <select onchange="nowcolor(this.value)">
         <option value="blue">Blue</option>
-        <option value="purple">Purple</option>
+        <option value="red">Red</option>
+        <option value="yellow">Yellow</option>
+        <option value="orange">Orange</option>
+       
       </select>
     </div>
     <br />
