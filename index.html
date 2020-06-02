@@ -1,8 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <title>assignment5</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="grids">
+        <button type="button" onClick="NewRows()">Add a row</button>
+        <button type="button" onClick="NewCells()">Add a cells</button>
+        <button type="button" onClick="removeRow()">Remove a rows</button>
+        <button type="button" onClick="removeCells()">Remove a cells</button>
+        <button type="button" onClick="fillUncolored()">Color uncolored cells</button>
+        <button type="button" onClick="fillAll()">Color all cells</button>
+        <button onClick="clearAll()">Clear all cells</button>
+    </div>
 
-    </head>
+    <div>
+      <br>
+      <br>
+      <span>Select color:</span>
+      <select onchange="selectColor(this.value)">
+        <option value="red">Red</option>
+        <option value="orange">Orange</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="purple">Purple</option>
+      </select>
+    </div>
+    <br />
 
+    <table id="table"></table>
 
+    <script src="script.js"></script>
+  </body>
 </html>
