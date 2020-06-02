@@ -66,6 +66,16 @@ function NewCols(){
     this.classList.remove("uncolor");
   }
 
+
+  function colorAllCells() {
+    let cells = document.getElementsByTagName("td");
+    let allCells = [...cells];
+    allCells.forEach((cell) => {
+      cell.style.backgroundColor = mycolor;
+      cell.classList.remove("uncolor");
+    });
+  }
+
   function unfilledCells() {
     let cells = document.getElementsByTagName("td");
     let allCells = [...cells];
