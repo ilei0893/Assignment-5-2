@@ -58,6 +58,16 @@ function NewCols(){
   function helper(cell) {
     cell.classList.add("uncolor");
     cell.addEventListener("click", changeColor);
+
+    cell.addEventListener("mousedown", (event) => {
+      iscolor = true;
+    });
+    cell.addEventListener("mousemove", (event) => {
+      if(iscolor) { cell.style.backgroundColor = mycolor;}
+    });
+    cell.addEventListener("mouseup", (event) => {
+      if(iscolor) { iscolor = false; }
+    });
   
   }
 
