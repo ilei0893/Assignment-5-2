@@ -9,7 +9,7 @@ function NewRows() {
     table.appendChild(row);
     for (let i = 0; i < cells; i++) {
       let cell = document.createElement("td");
-      helperFunction(cell);
+      helper(cell);
       row.appendChild(cell);
 
     }
@@ -18,7 +18,7 @@ function NewRows() {
     let rows = document.getElementsByClassName("row");
     tr = [...rows]
     if (tr.length == 0) {
-        alert('there is nothing to remove');
+        alert('there is nothing can remove');
       return this
     }
     tr[tr.length - 1].parentNode.removeChild(tr[tr.length - 1]);
@@ -26,9 +26,21 @@ function NewRows() {
       cells = 1
     }
 }
+
+function NewCols(){
+  let rows = document.getElementsByClassName("row");
+  tr = [...rows];
+  for (let i = 0; i < tr.length; i++) {
+    let cell = document.createElement("td");
+    helper(cell);
+    tr[i].appendChild(cell);
+  }
+  cells++;
+}
+
  function removecol() {
     if (cells == 1) {
-        alert('there is nothing to remove');
+        alert('there is nothing can remove');
       return this;
     }
     cells--;
@@ -43,7 +55,7 @@ function NewRows() {
     mycolor = color;
   };
 
-  function helperFunction(cell) {
+  function helper(cell) {
     cell.classList.add("uncolor");
     cell.addEventListener("click", changeColor);
   
